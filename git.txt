@@ -1,0 +1,24 @@
+ef ciph(text):
+    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
+                "v", "w", "x", "y", "z"]
+    symboled_text = list(text)
+    i = 0
+    a = 0
+    result=[1]
+    while i < len(symboled_text):
+        while a < len(alphabet):
+            if (symboled_text[i] == alphabet[a]):
+                if ((a + 3) > 25):
+                    temp = a + 3 - 26
+                    result[i] = alphabet[temp]
+                else:
+                    result[i] = alphabet[a + 3]
+            else:
+                a += a
+        i += i
+
+    for n in result:
+        print(n)
+
+
+ciph("molloy")
