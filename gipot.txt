@@ -1,0 +1,32 @@
+mport java.util.Random;
+
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+
+public class Gipoten {
+    int a;
+    int b;
+    int c;
+
+    public Gipoten(int a, int b ){
+        this.a=a;
+        this.b=a;
+        int c = (int) (pow(a,2) + pow(b,2));
+        double r= (double) sqrt(c);
+
+        System.out.println("гіпотенуза дорівнює=корінь з "+c);
+        System.out.println("корінь з "+c+" доівнює-"+r);
+
+    }
+    public  void hind_g(int a,int b){
+        this.a=a;
+        this.b=b;
+
+    }
+     public void generatorWishes(){
+        int r=  new Random().nextInt(6);
+        //генерує число в межах від 0 до 6
+        String[] wishes= {"Успіхів!","Щастя!","Здоров'я!","Любові!","Радості!"};
+        System.out.println(wishes[r]);
+    }
+}
